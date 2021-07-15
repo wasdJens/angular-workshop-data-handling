@@ -1,0 +1,7 @@
+<div *ngFor="let ticket of ticketsService.tickets">
+  <app-ticket-detail
+    [ticket]="ticket"
+    [color]="'red'"
+    (delete)="handleDelete($event)"
+  ></app-ticket-detail>
+</div>

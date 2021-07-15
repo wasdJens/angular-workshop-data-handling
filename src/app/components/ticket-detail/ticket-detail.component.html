@@ -1,0 +1,6 @@
+<div [ngStyle]="{ 'background-color': color }" *ngIf="ticket">
+  <h3>{{ ticket.title }}</h3>
+  <p>{{ ticket.description }}</p>
+  <p>{{ ticket.priority }}</p>
+  <button (click)="onDelete()">Delete</button>
+</div>

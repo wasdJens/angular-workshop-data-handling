@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="ticket-overview-header">
+      <h1>Ticket Resolver 3000</h1>
+  </div>
+  <div class="ticket-overview-controls">
+    <div class="ticket-overview-controls__buttons">
+      <button (click)="onShowAllTickets()">Show all Tickets</button>
+      <button (click)="onCreateTicket()">Create new Ticket</button>
+      <button (click)="onFavouriteToggle()">Enable / Disable Favourite</button>
+    </div>
+    <div class="ticket-overview-controls__search">
+      <input type="text"  (change)="onSearchInput($event)" [placeholder]="'Search...'" />
+    </div>
+  </div>
+
+  <div class="ticket-overview-content">
+    <app-create-ticket *ngIf="toggleCreate"></app-create-ticket>
+    <app-ticket-list></app-ticket-list>
+  </div>
+
+  <div>
+    {{sampleTicketTitle$ | async}}
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<form [formGroup]="createTicketForm">
+  <label for="title">Title</label>
+  <input type="text" id="title" formControlName="title" required>
+  <label for="description">Description</label>
+  <input type="text" id="description" formControlName="description" required/>
+  <label for="priority">Priority</label>
+  <input type="text" id="priority" formControlName="priority" required/>
+  <button (click)="onSubmit()" [disabled]="!createTicketForm.valid">Create</button>
+</form>
+
+<div>
+  {{configService.config | json}}
+</div>

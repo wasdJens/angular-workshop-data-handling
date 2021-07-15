@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  border-radius: 3px;
+  background-color:aquamarine;
+  border: 1px solid black;
+  padding: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(80%);
+}
+
+button:disabled {
+  border: none;
+  background-color: lightgray;
+}
+
+input[type=text] {
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
